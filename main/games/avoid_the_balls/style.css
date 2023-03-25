@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+}
+.dead-screen{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    color:red;
+    background-color: yellow;
+    }
+.body{
+    background-color:aqua;
+}

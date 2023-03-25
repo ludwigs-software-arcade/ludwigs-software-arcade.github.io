@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta cahrset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2 class="center">Please read terms-and-conditions</h2>
+        <div class="center">
+            <input type="checkbox" name="checkbox" />
+            <p>I agree to:<p>
+            <a href="terms-and-conditions.html">Terms and conditions</a>
+        </div>
+        <div  class="login_page">
+            <div class="center">
+                <input name="username">username</input>
+            </div>
+            <div class="center">
+                <input name="password-input">password</input>
+            </div>
+            <div class="center">
+                <button class="login-link">login</button>
+            </div>
+            <div class="center">
+                <button class="create-account">create account</button>
+            </div>
+        </div>
+        <h1 class="balance_text hidden"></h1>
+        <div class="center counter">
+            <h3>This page has been visited <code id="visits">...</code> times</h3>
+        </div>
+        <script async src="https://api.countapi.xyz/hit/ludwigssoftwarearcadee.com/visits?callback=cb"></script>
+        <script src="./code.js"></script>
+    <body>
+</html>

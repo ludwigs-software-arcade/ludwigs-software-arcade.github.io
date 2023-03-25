@@ -1,0 +1,25 @@
+.body-style {
+    margin-left: 10px;
+}
+.electromagnetic_spectrum_image {
+  width: 400px;
+  height: 230px;
+  margin-right: 10px;
+  background-image: url(../img/electromagnetic_spectrum.jpg);
+  background-size: contain;
+}
+
+.paragraph {
+  margin-bottom: 50px;
+}
+
+.title {
+  color: darkcyan;
+}
+.daily-title{
+  background-color: aqua;
+  color:blue;
+}
+.daily {
+  background-color: aqua;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var platform = document.createElement('div');
+platform.style.position = 'absolute';
+platform.style.left = '50%';
+platform.style.top = '50%';
+platform.style.width = '100px';
+platform.style.height = '100px';
+platform.style.backgroundColor = 'red';
+document.body.appendChild(platform);
+var bullet = document.createElement('div');
+bullet.style.position = 'absolute';
+bullet.style.left = '50%';
+bullet.style.top = '50%';
+bullet.style.width = '10px';
+bullet.style.height = '10px';
+bullet.style.backgroundColor = 'blue';
+document.body.appendChild(bullet);
+var bulletSpeed = 10;
+var bulletDirection = 0;
+function moveBullet() {
+  bullet.style.left = parseInt(bullet.style.left) + bulletSpeed * Math.cos(bulletDirection) + 'px';
+  bullet.style.top = parseInt(bullet.style.top) + bulletSpeed * Math.sin(bulletDirection) + 'px';
+}
+setInterval(moveBullet, 10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+}
+ 
+.logo-div {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(0, 151, 252);
+    color:yellow;
+}
+
+.logo-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-image: url(../img/logo.jpg);
+  background-size: contain;
+}
+
+.navbar {
+  background-color: aqua;
+  height: 120px;
+}
+
+.balance {
+  display: flex;
+  justify-content: flex-end;
+  color:black
+}
+
+.categorys {
+  display: flex;
+}
+
+.category-button {
+  background-color: darkblue;
+  color: black;
+  height: 80px;
+  width: 80px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5px;
+}
+.category-button:hover {
+  background-color: blue;
+}
+.category-button:active {
+  background-color: rgb(36, 166, 241);
+}
+
+@keyframes title-text-animation {
+  100%,
+    0% {
+      color: rgb(255, 0, 0);
+    }
+    8% {
+      color: rgb(255, 127, 0);
+    }
+    16% {
+      color: rgb(255, 255, 0);
+    }
+    25% {
+      color: rgb(127, 255, 0);
+    }
+    33% {
+      color: rgb(0, 255, 0);
+    }
+    41% {
+      color: rgb(0, 255, 127);
+    }
+    50% {
+      color: rgb(0, 255, 255);
+    }
+    58% {
+      color: rgb(0, 127, 255);
+    }
+    66% {
+      color: rgb(0, 0, 255);
+    }
+    75% {
+      color: rgb(127, 0, 255);
+    }
+    83% {
+      color: rgb(255, 0, 255);
+    }
+    91% {
+      color: rgb(255, 0, 127);
+    }
+}
+    
+.title-text {
+      color: red;
+      animation-name: title-text-animation;
+      animation-duration: 4s;
+      display:flex;
+      justify-content: space-around;
+      animation-iteration-count: infinite;
+      margin-bottom: 20px;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}

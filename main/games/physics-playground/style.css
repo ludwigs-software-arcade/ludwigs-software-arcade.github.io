@@ -1,0 +1,9 @@
+*{
+margin: 0px;
+}
+.options {
+    background-color: lightblue;
+}
+.lineup {
+    display: flex;
+}

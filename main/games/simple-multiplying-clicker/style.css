@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightblue;
+}
+.main-clicker {
+    display: flex;
+    justify-content: center;
+}
+
+.main-button {
+    background-color: red;
+    border-color:yellow;
+    width: 150px;
+    height: 150px;
+    margin-top: 50px;
+}
+.main-button:hover {
+    background-color: rgb(255, 230, 2);
+}
+
+.amount {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: blue;
+    font-size: 50px;
+    background-color: cyan;
+}
+.mbutton {
+    background-color: rgb(91, 192, 223);
+    border-color: aquamarine;
+}
+.mbutton:hover {
+    background-color: rgb(54, 125, 219);
+}
+.mbutton:active {
+  background-color: rgb(16, 228, 228);
+}
+
+.m-amount {
+    font-size: 20px;
+    color: rgb(119, 0, 255);
+}
+
+
+@keyframes m-text-animation {
+    100%,
+      0% {
+        color: rgb(255, 0, 0);
+      }
+      8% {
+        color: rgb(255, 127, 0);
+      }
+      16% {
+        color: rgb(255, 255, 0);
+      }
+      25% {
+        color: rgb(127, 255, 0);
+      }
+      33% {
+        color: rgb(0, 255, 0);
+      }
+      41% {
+        color: rgb(0, 255, 127);
+      }
+      50% {
+        color: rgb(0, 255, 255);
+      }
+      58% {
+        color: rgb(0, 127, 255);
+      }
+      66% {
+        color: rgb(0, 0, 255);
+      }
+      75% {
+        color: rgb(127, 0, 255);
+      }
+      83% {
+        color: rgb(255, 0, 255);
+      }
+      91% {
+        color: rgb(255, 0, 127);
+      }
+  }
+
+.M-text {
+    font-size: 20px;
+    color: red;
+    animation-name: m-text-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+.lineup {
+    display: flex;
+}
+.hidden2 {
+  display: none;
+}

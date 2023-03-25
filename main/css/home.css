@@ -1,0 +1,23 @@
+.dashboard {
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: lightgray;
+    color: rgb(38, 216, 38);
+}
+.discord-link {
+    font-size: 20px;
+}
+.discord-link1 {
+    margin-top: 10px;
+    display:flex;
+    color: black;
+}
+.discord-link2 {
+    display: block;
+    color: black;
+}
+.daily-fact-link{
+    font-size: 40px;
+    background-color: aqua;
+    color:blue;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Physics playground</title>
+ <link rel="stylesheet" href="./style.css">
+ <style>
+ </style>
+</head>
+<body>
+    <div class="options">
+        <div class="lineup">
+        <input class="width">width(only numbers)</input>
+        <input class="height">height(only numbers)</input>
+        </div>
+        <div class="lineup">
+        <input class="color-option">color</input>
+        </div>
+        <div class="lineup">
+            <input class="friction">friction(only numbers between 0 and 1)</input>
+        </div>
+        <button class="create-object">CREATE</button>
+        <div class="lineup">
+            <input class="gravity-y">gravity(only numbers)</input>
+        </div>
+        <button class="world-edit">Apply rules</button>
+    </div>
+    <div id="areaToRender">
+    </div>
+    <script scr="./localload.js"></script>
+    <script src="./matter.min.js"></script>
+    <script src="code.js"></script>
+</body>
+</html>
