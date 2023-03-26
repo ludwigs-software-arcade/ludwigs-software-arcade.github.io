@@ -1,4 +1,44 @@
-/* create a character that I can move around */
+let mapx=0;
+let mapy=0;
+
+
+let canvas1=document.querySelector(".canvas1");
+canvas1.style.backgroundColor="rgb(255,255,255)";
+canvas1.width=1000;
+canvas1.height=600;
+let ctx1=canvas1.getContext("2d");
+
+// buffer canvas
+let canvas2=document.querySelector(".canvas2");
+canvas2.style.backgroundColor="rgb(255,255,255)";
+canvas2.width=1000;
+canvas2.height=600;
+let ctx2=canvas2.getContext("2d");
+
+function draw(){
+  ctx2.fillStyle="rgb(0,255,200)";
+  ctx2.fillRect(0,0,1000,600);
+  
+
+  ctx1.drawImage(canvas2, 0, 0);
+}
+
+function main(){
+  draw();
+};
+
+
+
+
+
+setInterval(main(),10);
+
+
+
+
+
+
+/* create a character that I can move around 
 let character = document.createElement('div');
 character.style.position = 'absolute';
 character.style.width = `50px`;
@@ -7,11 +47,9 @@ character.style.backgroundColor = 'red';
 character.style.top = `${window.innerHeight/2-25}px`;
 character.style.left = `${window.innerWidth/2-25}px`;
 document.body.appendChild(character);
-/* create an event listener that lets me move the character */
 document.addEventListener('keydown', function(event) {
   return;
 });
-/* let the character look at my mouse */
 document.addEventListener('mousemove', function(event) {
   var x = event.clientX;
   var y = event.clientY;
@@ -28,13 +66,6 @@ document.onmousemove = function(e) {
   mouseX = e.clientX;
   mouseY = e.clientY;
 };
-
-function getAngle(x1, y1, x2, y2) {
-  var x = x1 - x2;
-  var y = y1 - y2;
-  var angle = Math.atan2(y, x) * 180 / Math.PI;
-  return angle;
-}
 
 let bullets={};
 let numBullets=0;
@@ -58,3 +89,4 @@ function moveBullets (){
     bullet[`${i}`];
   };
 }
+*/

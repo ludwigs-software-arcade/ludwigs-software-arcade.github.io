@@ -1,0 +1,13 @@
+.body {
+    background-color: rgb(40, 12, 202);
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+.canvas1 {
+    border: 2px solid rgb(255, 230, 2);
+}
+.canvas2 {
+    display: none;
+}
