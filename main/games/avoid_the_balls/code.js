@@ -126,7 +126,7 @@ function moveBall() {
       highscore=score;
     }
     save_localstorage(user_info1);
-    document.body.innerHTML=`<div class="dead-screen"><h1>You failed to avoid the balls</h1><h1>score:${score}</h1><h1>highscore:${highscore}</h1><h1><a href="./../../games.html">home</a><a href="./avoid_the_balls.html">try again</a></h1>
+    document.body.innerHTML=`<div class="dead-screen"><h1>You failed to avoid the balls</h1><h1>score:${score}</h1><h1>highscore:${highscore}</h1><h1><a href="./../../games.html">home</a></h1><h1><a href="./avoid_the_balls.html">try again</a></h1>
     <h1>You are the yellow block and you must avoid the balls.</h1>
     <h1>control keys: w,a,s,d</h1>
     </div>`;
