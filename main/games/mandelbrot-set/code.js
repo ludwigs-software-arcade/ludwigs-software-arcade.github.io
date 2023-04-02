@@ -2,6 +2,11 @@ var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
 var pallette=[]; // the array that will hold the hex strings of the colors
 
+let real_number= document.querySelector(".real_number");
+let imaginary_number = document.querySelector(".imaginary_number");
+let loading = document.querySelector(".loading");
+let calb = document.querySelector(".calb");
+
 let power_factor=2;
  
 for(x=0;x<256;x++) // the loop that creates the pallette
@@ -35,17 +40,27 @@ for(x=0;x<256;x++) // the loop that creates the pallette
  
         pallette[x]="#"+r+g+b; // final hex string
         }
- 
-function mandel(){
+
+calb.addEventListener('click',function () {
+                loading.classList.toggle('hidden',true);
+        let xx=real_number.value;
+        let yy=imaginary_number.value;
 for(var x=0;x<800;x++)
         {
         for(var y=0;y<800;y++)
                 {
                         var a = -2+x/200;
                         var b = -2+y/200;
-                  
-                        var ca = a;
-                        var cb = b;
+                        if(xx.length!=0 && isNaN(xx)==false){
+                                var ca = Number(xx);
+                        }else{
+                                var ca = a;
+                        }
+                        if(yy.length!=0 && isNaN(yy)==false){
+                                var cb = Number(yy);
+                        }else{
+                                var cb = b;
+                        }
                   
                         var i = 0;
                   
@@ -66,5 +81,5 @@ for(var x=0;x<800;x++)
                         context.fill();
                 }
         }
-    }
-mandel();
+        loading.style.display="none";
+    });

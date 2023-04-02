@@ -4,3 +4,19 @@
 .body {
     background-color: aqua;
 }
+.align {
+    display: flex;
+}
+.loading {
+    color: blue;
+    font-size: 150%;
+}
+.hidden {
+    display: none;
+}
+.recommended_values {
+    margin-top: 20px;
+}
+.value{
+    margin-bottom: 10px;
+}
