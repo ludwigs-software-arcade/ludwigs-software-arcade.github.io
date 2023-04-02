@@ -52,8 +52,8 @@ for(var x=0;x<800;x++)
                         while (i < 255) {
                           var aa = a **power_factor - b ** power_factor;
                           var bb = 2 * a * b;
-                          a = aa + 0.285; //ca
-                          b = bb + 0.01; //cb
+                          a = aa + ca; //ca
+                          b = bb + cb; //cb
                           if ((a**power_factor+b**power_factor)>200){
                             break;
                           }
