@@ -7,6 +7,11 @@ let imaginary_number = document.querySelector(".imaginary_number");
 let loading = document.querySelector(".loading");
 let calb = document.querySelector(".calb");
 
+let start_x = -2;
+let start_y = -2;
+let scale = 200;
+let zoom_num = 2;
+
 let power_factor=2;
  
 for(x=0;x<256;x++) // the loop that creates the pallette
@@ -41,16 +46,15 @@ for(x=0;x<256;x++) // the loop that creates the pallette
         pallette[x]="#"+r+g+b; // final hex string
         }
 
-calb.addEventListener('click',function () {
-                loading.classList.toggle('hidden',true);
+function mandel(){
         let xx=real_number.value;
         let yy=imaginary_number.value;
 for(var x=0;x<800;x++)
         {
         for(var y=0;y<800;y++)
                 {
-                        var a = -2+x/200;
-                        var b = -2+y/200;
+                        var a = start_x+x/scale;
+                        var b = start_y+y/scale;
                         if(xx.length!=0 && isNaN(xx)==false){
                                 var ca = Number(xx);
                         }else{
@@ -81,5 +85,29 @@ for(var x=0;x<800;x++)
                         context.fill();
                 }
         }
-        loading.style.display="none";
+};
+mandel();
+
+calb.addEventListener('click',function () {
+        //loading.classList.toggle('hidden',true);
+        start_x = -2;
+        start_y = -2;
+        scale = 200;
+        mandel();
+        //loading.style.display="none";
     });
+
+
+       context = canvas.getContext('2d'),
+       elements = [];
+    
+    // event listener for click event
+    canvas.addEventListener('click', function(event) {
+       var xVal = event.pageX //- elemLeft;
+       var yVal = event.pageY //- elemTop;
+       start_x=start_x+(xVal/scale)/zoom_num;
+       start_y=start_y+(yVal/scale)/zoom_num;
+       scale=scale*zoom_num;
+       mandel();
+       });
+    
