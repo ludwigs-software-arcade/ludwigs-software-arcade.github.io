@@ -27,3 +27,9 @@
     font-size: 150%;
     color: red;
 }
+.myCanvas {
+    margin: 10px;
+}
+.mandel_size_div {
+    margin-top: 10px;
+}

@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body class="body">
-    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <div class="canvas_contain">
+    </div>
     <div>
         <div>
-            <p class="zoom-info">Click on the mandelbrot/julia set to zoom in on a spot.(Wait a few seconds after you clicked on the set until it it zoomed in).</p>
+            <p class="click_pos">click position: real_number: ,imaginary number: </p>
+            <p class="zoom-info">Click on the mandelbrot/julia set to zoom in on a spot.(Wait a few seconds after you clicked on the set until it is zoomed in).</p>
         </div>
         <p class="p1">Here you can change the real number values and the imaginary number values.</p>
         <p>recommended values are between -2 and 2 eg: 0.196873</p>
@@ -26,98 +28,12 @@
         <button class="calb">draw mandelbrot/julia set</button>
         <p class="loading">please wait after you press draw until it is done drawing.</p>
         </div>
+        <div class="align mandel_size_div">
+            <button class="mandel_size">change mandelbrot picture size</button>
+            <p>The set will take longer to load when you zoom in and draw if the set is bigger.</p>
+        </div>
         <div class="recommended_values">
             <h2>recommended values:</h2>
-
-            <div class="value">
-                <div>
-                    <p>real number: 0.285</p>
-                </div>
-                <div>
-                    <p>imaginary number: 0</p>
-                </div>
-            </div>
-
-            <div class="value">
-                <div>
-                    <p>real number: 0.285</p>
-                </div>
-                <div>
-                    <p>imaginary number: 0.01</p>
-                </div>
-            </div>
-
-            <div class="value">
-                <div>
-                    <p>real number: -0.4</p>
-                </div>
-                <div>
-                    <p>imaginary number: 0.6</p>
-                </div>
-            </div>
-
-            <div class="value">
-                    <div>
-                        <p>real number: -0.7269</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.1889</p>
-                    </div>
-                </div>
-
-                <div class="value">
-                    <div>
-                        <p>real number: -0.8</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.156</p>
-                    </div>
-                </div>
-                
-                <div class="value">
-                    <div>
-                        <p>real number: -0.835</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.2321</p>
-                    </div>
-                </div>
-
-                <div class="value">
-                    <div>
-                        <p>real number: -1.037</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.17</p>
-                    </div>
-                </div>
-
-                <div class="value">
-                    <div>
-                        <p>real number: -0.624</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.435</p>
-                    </div>
-                </div>
-
-                <div class="value">
-                    <div>
-                        <p>real number: 0.38846442885771504</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: 0.2334105711422847</p>
-                    </div>
-                </div>
-
-                <div class="value">
-                    <div>
-                        <p>real number: 0.28</p>
-                    </div>
-                    <div>
-                        <p>imaginary number: -0.01</p>
-                    </div>
-                </div>
 
             </div>
         </div>
