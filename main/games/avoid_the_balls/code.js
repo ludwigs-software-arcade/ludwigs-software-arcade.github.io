@@ -169,30 +169,30 @@ function moveCharacter() {
 }
 setInterval(moveCharacter, 10);
 document.addEventListener('keydown', function(event) {
-  if (event.key === "a") {
+  if (event.key === "a" || event.key === "A") {
     characterSpeedX = -5;
   }
-  if (event.key === "d") {
+  if (event.key === "d" || event.key === "D") {
     characterSpeedX = 5;
   }
-  if (event.key === "w") {
+  if (event.key === "w" || event.key === "W") {
     characterSpeedY = -5;
   }
-  if (event.key === "s") {
+  if (event.key === "s" || event.key === "S") {
     characterSpeedY = 5;
   }
 });
 document.addEventListener('keyup', function(event) {
-    if (event.key === "a") {
+    if (event.key === "a" || event.key === "A") {
     characterSpeedX = 0;
   }
-  if (event.key === "d") {
+  if (event.key === "d" || event.key === "D") {
     characterSpeedX = 0;
   }
-  if (event.key === "w") {
+  if (event.key === "w" || event.key === "W") {
     characterSpeedY = 0;
   }
-  if (event.key === "s") {
+  if (event.key === "s" || event.key === "S") {
     characterSpeedY = 0;
   }
 });
