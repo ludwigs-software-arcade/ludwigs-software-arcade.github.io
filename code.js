@@ -8,7 +8,7 @@ if (!localStorage.getItem('accounts') || localStorage.accounts=="null" || localS
   localStorage.setItem("accounts",JSON.stringify(accounts));
 } else {
   accounts=localStorage.getItem("accounts");
-  accounts=JSON.parse(accounts)
+  accounts=JSON.parse(accounts);
   for (i=0;i<accounts.length;i++){
   if (accounts[i][4].length<4){
     accounts[i][4].push({});
@@ -77,7 +77,7 @@ create_account.addEventListener('click', async function() {
       `${password.value}`, //password  1
       0, //balance  2
       [Math.floor(Math.random()*89+10),processedResponse.value], //id  3
-      [ [[1,1,false],[1,1,1,1,1,1]]/*multiplying clicker*/ ,[0]/*avoid the balls*/,[0,0]/*daily fact*/,{} ], //games data  4
+      [ [[1,1,false],[1,1,1,1,1,1]]/*multiplying clicker*/ ,[0]/*avoid the balls*/,[0,0]/*daily fact*/,{}], //games data  4
       [{
         logo_nav_background:"",
         logo_nav_text:"",

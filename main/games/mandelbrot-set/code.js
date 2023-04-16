@@ -53,23 +53,25 @@ for (i=0;i<add_recommended_values.length;i++){
                 imaginary_number.value=recommended_values[Number(this.accessKey)][1];
         })
 }
+var i_multiplyer=1; //natural numbers
+var max_i=255*i_multiplyer;
 
 
-for(x=0;x<256;x++) // the loop that creates the pallette
+for(x=0;x<256*i_multiplyer;x++) // the loop that creates the pallette
         {
-        if(x<85)        // colors 0-84
+        if(x<85*i_multiplyer)        // colors 0-84
                 {
                 r=x*3;
                 g=0;
                 b=0;
                 }
-        if(x>84&&x<171)        // colors 85-170
+        if(x>85*i_multiplyer-1&&x<171*i_multiplyer)        // colors 85-170
                 {
                 r=0;
                 g=3*(x-84);
                 b=0;
                 }
-        if(x>170)        // colors 170-255
+        if(x>171*i_multiplyer-1)        // colors 170-255
                 {
                 r=0;
                 g=0;
@@ -109,12 +111,12 @@ for(var x=0;x<canvas_size;x++)
                   
                         var i = 0;
                   
-                        while (i < 255) {
+                        while (i < max_i) {
                           var aa = a **power_factor - b ** power_factor;
                           var bb = 2 * a *b;
                           a = aa + ca; //ca
                           b = bb + cb; //cb
-                          if ((a**power_factor+b**power_factor)>4){
+                          if ((a**power_factor+b**power_factor)>6){
                             break;
                           }
                           i++;
@@ -174,8 +176,6 @@ size_button.addEventListener('click', function(event) {
                 });
         mandel();
 });
-    
-
 
 
 

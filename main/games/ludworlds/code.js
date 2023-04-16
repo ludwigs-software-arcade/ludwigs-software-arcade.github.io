@@ -1,23 +1,51 @@
+import data from './data.json' assert {type: 'json'};
+
 let mapx=0;
 let mapy=0;
 
+let max_screen_blocks=21;
+let world=[];
+
+let a;
+let b;
+for (a=0;a<max_screen_blocks;a++){
+  let edit=[];
+  for(b=0;b<max_screen_blocks;b++){
+    edit.push(data.blocks.air);
+  }
+  world.push(edit);
+}
+
+let player=data.entities.player;
+
+let windowsize=window.innerHeight;
+if (window.innerHeight>window.innerWidth){
+  windowsize=window.innerWidth;
+}
+if (window.innerWidth>window.innerHeight){
+  windowsize=window.innerHeight;
+}
 
 let canvas1=document.querySelector(".canvas1");
 canvas1.style.backgroundColor="rgb(255,255,255)";
-canvas1.width=1000;
-canvas1.height=600;
+canvas1.width=windowsize;
+canvas1.height=windowsize;
 let ctx1=canvas1.getContext("2d");
 
 // buffer canvas
 let canvas2=document.querySelector(".canvas2");
 canvas2.style.backgroundColor="rgb(255,255,255)";
-canvas2.width=1000;
-canvas2.height=600;
+canvas2.width=windowsize;
+canvas2.height=windowsize;
 let ctx2=canvas2.getContext("2d");
 
 function draw(){
   ctx2.fillStyle="rgb(0,255,200)";
-  ctx2.fillRect(0,0,1000,600);
+  ctx2.fillRect(0,0,windowsize,windowsize);
+  //end of screen reset
+
+  ctx2.fillStyle="rgb(255,0,200)";
+  ctx2.fillRect(0,0,windowsize/max_screen_blocks,windowsize/max_screen_blocks);
   
 
   ctx1.drawImage(canvas2, 0, 0);
@@ -32,6 +60,10 @@ function main(){
 
 
 setInterval(main(),10);
+
+
+//create a online chat room?
+
 
 
 

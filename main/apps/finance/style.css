@@ -1,0 +1,30 @@
+*{margin: 0px;}
+.body{
+    background-color: aqua;
+}
+.main {
+    display: flex;
+    flex-direction: column;
+}
+.balance-div {
+    display: flex; 
+    width: 100%;
+    justify-content: center;
+    border: blue 2px solid;
+}
+.name-title-div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color:rgb(211, 211, 61);
+}
+.center {
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
+.link {
+background-color: rgb(61, 132, 238);
+font-size: 120%;
+border: yellow 1px solid;
+}

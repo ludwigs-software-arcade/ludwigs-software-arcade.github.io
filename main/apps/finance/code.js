@@ -20,4 +20,12 @@ function save_localstorage (saveitem){
     } 
     localStorage.setItem("accounts",JSON.stringify(user_info24));
 }
-export {load_localStorage,save_localstorage};
+user_info1=load_localStorage();
+let balance=user_info1[2];
+
+
+let balance_text=document.querySelector(".balance");
+balance_text.innerText=`Balance:${balance}`;
+
+let name_title=document.querySelector(".name-title");
+name_title.innerText=`Hello ${user_info1[0]}`;

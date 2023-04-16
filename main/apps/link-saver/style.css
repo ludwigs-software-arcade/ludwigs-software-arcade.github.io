@@ -1,0 +1,11 @@
+.warning-text{
+color:red;
+}
+.saved-links {
+    margin-top: 20px;
+}
+.a-link {
+    display: flex;
+    justify-content: space-between;
+    border: yellow 2px solid;
+}
