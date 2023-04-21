@@ -44,8 +44,8 @@ function draw(){
   ctx2.fillRect(0,0,windowsize,windowsize);
   //end of screen reset
 
-  ctx2.fillStyle="rgb(255,0,200)";
-  ctx2.fillRect(0,0,windowsize/max_screen_blocks,windowsize/max_screen_blocks);
+  ctx2.drawImage(player.texture, (Math.floor(max_screen_blocks/2))*(windowsize/max_screen_blocks), (Math.floor(max_screen_blocks/2))*(windowsize/max_screen_blocks));
+  
   
 
   ctx1.drawImage(canvas2, 0, 0);

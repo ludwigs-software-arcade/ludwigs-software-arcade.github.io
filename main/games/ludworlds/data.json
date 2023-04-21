@@ -2,7 +2,7 @@
     "entities":{
         "player":{
             "name":"player",
-            "texture":"none",
+            "texture":"./img/player.png",
             "health":100,
             "maxhealth":100,
             "regeneration":2,

@@ -103,3 +103,19 @@
   display: flex;
   justify-content: center;
 }
+
+.subject {
+  display: flex;
+  background-color: blue;
+  color:yellow;
+  height:40px ;
+  border: 2px rgb(0, 204, 255) solid;
+  justify-content: center;
+  width: 100%;
+}
+.subject:hover {
+  background-color: rgb(52, 179, 221);
+}
+.subject:active {
+  background-color: rgb(12, 97, 224);
+}

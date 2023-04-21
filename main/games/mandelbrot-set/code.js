@@ -53,25 +53,27 @@ for (i=0;i<add_recommended_values.length;i++){
                 imaginary_number.value=recommended_values[Number(this.accessKey)][1];
         })
 }
-var i_multiplyer=1; //natural numbers
-var max_i=255*i_multiplyer;
-
-
-for(x=0;x<256*i_multiplyer;x++) // the loop that creates the pallette
+let color_pallette=2;
+let pallette1=[];
+for (var i=0;i<256;i++){
+    pallette1.push(`rgb(${i},${i},${i})`)
+};
+let pallette2=[];
+for(x=0;x<256;x++) // the loop that creates the pallette
         {
-        if(x<85*i_multiplyer)        // colors 0-84
+        if(x<85)        // colors 0-84
                 {
                 r=x*3;
                 g=0;
                 b=0;
                 }
-        if(x>85*i_multiplyer-1&&x<171*i_multiplyer)        // colors 85-170
+        if(x>84&&x<171)        // colors 85-170
                 {
                 r=0;
                 g=3*(x-84);
                 b=0;
                 }
-        if(x>171*i_multiplyer-1)        // colors 170-255
+        if(x>170)        // colors 170-255
                 {
                 r=0;
                 g=0;
@@ -86,8 +88,83 @@ for(x=0;x<256*i_multiplyer;x++) // the loop that creates the pallette
         if (g.length==1) g="0"+g;
         if (b.length==1) b="0"+b;
  
-        pallette[x]="#"+r+g+b; // final hex string
+        pallette2[x]="#"+r+g+b; // final hex string
         }
+let pallette3=[];
+        for(x=0;x<256;x++) // the loop that creates the pallette
+                {
+                if(x<85)        // colors 0-84
+                        {
+                        r=0;
+                        g=0;
+                        b=x*3;
+                        }
+                if(x>84&&x<171)        // colors 85-170
+                        {
+                        r=0;
+                        g=3*(x-84);
+                        b=0;
+                        }
+                if(x>170)        // colors 170-255
+                        {
+                        r=3*(x-170);
+                        g=0;
+                        b=0;
+                        }
+         
+                r=r.toString(16); // conversion to hex
+                g=g.toString(16);
+                b=b.toString(16);        
+         
+                if (r.length==1) r="0"+r; // add a zero in front to change single-digit to double digit
+                if (g.length==1) g="0"+g;
+                if (b.length==1) b="0"+b;
+         
+                pallette3[x]="#"+r+g+b; // final hex string
+                }
+let pallette4=[];
+        for(x=0;x<256;x++) // the loop that creates the pallette
+                {
+                if(x<85)        // colors 0-84
+                        {
+                        r=0;
+                        g=x*3;
+                        b=0;
+                        }
+                if(x>84&&x<171)        // colors 85-170
+                        {
+                        r=0;
+                        g=0;
+                        b=3*(x-84);
+                        }
+                if(x>170)        // colors 170-255
+                        {
+                        r=3*(x-170);
+                        g=0;
+                        b=0;
+                        }
+         
+                r=r.toString(16); // conversion to hex
+                g=g.toString(16);
+                b=b.toString(16);        
+         
+                if (r.length==1) r="0"+r; // add a zero in front to change single-digit to double digit
+                if (g.length==1) g="0"+g;
+                if (b.length==1) b="0"+b;
+         
+                pallette4[x]="#"+r+g+b; // final hex string
+                }
+var pallette5 = [];
+                while (pallette5.length < 256) {
+                    do {
+                        var color = Math.floor((Math.random()*1000000)+1);
+                    } while (pallette5.indexOf(color) >= 0);
+                    pallette5.push("#" + ("000000" + color.toString(16)).slice(-6));
+                }
+var pallette6 = [];
+                for(let i=0;i<256;i++){
+                    pallette6.push(`rgb(0,${i},255)`);
+                }
 
 function mandel(){
         let xx=real_number.value;
@@ -111,7 +188,7 @@ for(var x=0;x<canvas_size;x++)
                   
                         var i = 0;
                   
-                        while (i < max_i) {
+                        while (i < 255) {
                           var aa = a **power_factor - b ** power_factor;
                           var bb = 2 * a *b;
                           a = aa + ca; //ca
@@ -124,7 +201,24 @@ for(var x=0;x<canvas_size;x++)
  
                         context.beginPath();
                         context.rect(x*1, y*1, 1, 1);
-                        context.fillStyle = pallette[i]; // the number of iterations determines the color
+                        if(color_pallette==1){
+                                context.fillStyle = pallette1[i]; 
+                        }
+                        if(color_pallette==2){
+                                context.fillStyle = pallette2[i]; 
+                        }// the number of iterations determines the color
+                        if(color_pallette==3){
+                                context.fillStyle = pallette3[i]; 
+                        }
+                        if(color_pallette==4){
+                                context.fillStyle = pallette4[i]; 
+                        }
+                        if(color_pallette==5){
+                                context.fillStyle = pallette5[i]; 
+                        }
+                        if(color_pallette==6){
+                                context.fillStyle = pallette6[i]; 
+                        } // the number of iterations determines the color
                         context.fill();
                 }
         }

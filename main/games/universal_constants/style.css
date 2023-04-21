@@ -1,0 +1,37 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+.body {
+    background-color: aqua;
+}
+.dashboard {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 130%;
+}
+.constant {
+    display: flex;
+    background-color: blue;
+    color:yellow;
+    height:50px ;
+    border: 2px rgb(0, 204, 255) solid;
+    justify-content: center;
+}
+.constant:hover {
+    background-color: rgb(52, 179, 221);
+}
+.constant:active {
+    background-color: rgb(12, 97, 224);
+}
+.div {
+width: 100%;
+}
+.value {
+    overflow-wrap: break-word;
+}
+.SM {
+    font-size: 130%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
